@@ -1,5 +1,7 @@
 FROM php:5.6-apache
 
+RUN apt-get update && apt-get install php5-mcrypt -y
+
 COPY php.ini /usr/local/etc/php/php.ini
 COPY . /var/www/html/
 
